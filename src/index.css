@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #0F172A;
+    background-color: #F8FAFC;
+  }
+
+  /* Crisp subtle scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+}
+
+.markdown-prose h1 {
+  @apply text-lg font-semibold text-origin-ink mt-4 mb-2;
+}
+.markdown-prose h2 {
+  @apply text-base font-semibold text-origin-ink mt-4 mb-2;
+}
+.markdown-prose h3 {
+  @apply text-sm font-semibold text-origin-ink mt-3 mb-1.5;
+}
+.markdown-prose p {
+  @apply text-sm text-origin-muted leading-relaxed mb-2.5;
+}
+.markdown-prose ul {
+  @apply list-disc pl-5 text-sm text-origin-muted space-y-1 mb-3;
+}
+.markdown-prose ol {
+  @apply list-decimal pl-5 text-sm text-origin-muted space-y-1 mb-3;
+}
+.markdown-prose code {
+  @apply font-mono text-xs bg-origin-surface text-origin-ink px-1.5 py-0.5 rounded;
+}
+.markdown-prose pre {
+  @apply font-mono text-xs bg-slate-900 text-slate-100 p-3.5 rounded-lg overflow-x-auto mb-3;
+}
+.markdown-prose blockquote {
+  @apply border-l-2 border-origin-accent pl-3 text-sm text-origin-muted italic my-2.5;
+}
+.markdown-prose table {
+  @apply w-full text-left border-collapse text-xs my-3 border border-origin-border rounded-lg overflow-hidden;
+}
+.markdown-prose th {
+  @apply bg-origin-subtle text-origin-ink font-medium px-3 py-2 border-b border-origin-border;
+}
+.markdown-prose td {
+  @apply px-3 py-2 border-b border-origin-border text-origin-muted;
+}
